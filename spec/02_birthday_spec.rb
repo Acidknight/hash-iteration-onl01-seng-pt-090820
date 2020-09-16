@@ -22,6 +22,16 @@ describe "#age_appropriate_birthday" do
       "Sarah" => 6,
       "Amanda" => 27
     }
+def happy_birthday(birthday_kids)
+  birthday_kids.each do |kids_name, age|
+    if age <= 12
+    puts "Happy Birthday #{kids_name}! You are now #{age} years old!"
+    elsif age > 12
+    puts "You are too old for this."
+  end
+end
+
+end
 
     expect{age_appropriate_birthday(birthday_kids)}.to output("Happy Birthday Timmy! You are now 9 years old!\nHappy Birthday Sarah! You are now 6 years old!\nYou are too old for this.\n").to_stdout
 
